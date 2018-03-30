@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 
 url_path = "http://weixin.sogou.com/weixin?type=2&query={}&page={}"
-page = 1
-Url_List = []
-Get_Data = "互联网"
+page = 1  #Get Data Pages
+Url_List = [] #Save Url Content
+Get_Data = "互联网"#Get Data KeyWords
 #config
 
 Headers = {"Uset-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
