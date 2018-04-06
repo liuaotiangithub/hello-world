@@ -4,7 +4,7 @@ from random import randint
 from platform import system
 import os
 import re
-from time import sleep
+import ctypes
 
 hand_url = "https://bing.ioliu.cn/"
 print("Look for image...")
@@ -26,13 +26,17 @@ if system() == "Windows":
 		#if folder exist
 		with open("C://壁纸/1.jpg", "wb") as f:
 			f.write(image.content)
+			print("download image file over!")
 			#write file
 	else:
 		#if folder not exist
 		os.mkdir(Path)
 		with open("C://壁纸/1.jpg", "wb") as f:
 			f.write(image.content)
+			print("download image file over!")
 			#write file
+	ctypes.windll.user32.SystemParametersInfoW(20, 0, "C://壁纸/1.jpg", 0)
+	print("End of setting!")
 elif system() == "Linux":
 	#if system is Linux
 	Path = "/home/壁纸"
