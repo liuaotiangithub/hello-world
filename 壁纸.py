@@ -24,7 +24,7 @@ def SaveAndSet(image_url):
 				f.write(image.content)
 				print("download image file over!")
 				#write file
-		ctypes.windll.user32.SystemParametersInfoW(20, 0, "C://壁纸/1.jpg", 0)
+		ctypes.windll.user32.SystemParametersInfoW(20, 0, r"C:\壁纸\1.jpg", 0)
 		print("End of setting!")
 	elif system() == "Linux":
 		#if system is Linux
